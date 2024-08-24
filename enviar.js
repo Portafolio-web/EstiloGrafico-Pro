@@ -10,9 +10,11 @@ function sendEmail(event) {
         from_name: nombre,
         from_email: correo,
         message: mensaje
-    }).then(function(response) {
+    }, "WLsMCV8o2FZbm-Q63")
+    .then(function(response) {
         alert("El mensaje se ha enviado correctamente.");
     }, function(error) {
-        alert("Ocurrió un error al enviar el mensaje.", error);
+        console.error("Ocurrió un error al enviar el mensaje:", error);
+        alert("Ocurrió un error al enviar el mensaje.");
     });
 }
